@@ -1,0 +1,31 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model Lot
+
+<div class="text-center">
+    <form asp-action="CreateLot" method="POST" id="create-lot-form" >
+        <fieldset>
+            <legend>Create Lot</legend>
+        <label for="currency-name">Currency name:</label>
+        <select id="currency-name" asp-for="Currency">
+            <option value="USD" selected>USD</option>
+            <option value="EUR">EUR</option>
+            <option value="UAN">UAN</option>
+        </select>
+        <br>
+        <label for="amount">Amount:</label>
+        <input type="text" id="amount" asp-for="Amount"/>
+        <br>
+        <label for="seller-first-name">Seller firstname:</label>
+        <input type="text" id="seller-first-name" asp-for="Firstname"/>
+        <br>
+            <label for="seller-last-name">Seller lastname:</label>
+            <input type="text" id="seller-last-name" asp-for="Lastname" />
+            <br>
+        <button type="submit" class="btn btn-danger">Create lot</button>
+            </fieldset>
+    </form>
+</div>
